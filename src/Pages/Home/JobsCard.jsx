@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const JobsCard = ({ job }) => {
-  const { title, location, jobType, company_logo, category } = job;
+  const {_id, title, location, jobType, company_logo, category } = job;
 
   return (
     <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200">
@@ -27,6 +28,7 @@ const JobsCard = ({ job }) => {
             {category}
           </span>
         </div>
+        <Link to={`/jobDetails/${_id}`}><button className='btn btn-wide ml-24 bg-gradient-to-b from-violet-600 to-red-500 text-white'>Show details</button></Link>
       </div>
     </div>
   );
