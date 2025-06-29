@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import useAuth from '../../useAuth/useAuth';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import useAuth from '../../useAuth/useAuth';
 
 
 const JobApply = () => {
